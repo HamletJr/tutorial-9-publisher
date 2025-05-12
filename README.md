@@ -26,3 +26,6 @@
 
 2. The url of: `amqp://guest:guest@localhost:5672` is the same as in the subscriber program, what does it mean?
     - Karena URL yang digunakan sama dengan URL pada program *subscriber*, kedua program akan tersambung pada instance RabbitMQ yang sama. Dengan kata lain, kedua program akan tersambung pada *message broker* yang sama dan bisa saling berkomunikasi; *publisher* akan mengirim *event* ke *message broker*, dan subscriber akan *consume* dan proses *event* tersebut dari *message broker* yang sama.
+
+### Reflection 2 (Running RabbitMQ)
+![Screenshot of running RabbitMQ on local machine](RabbitMQ.png)
