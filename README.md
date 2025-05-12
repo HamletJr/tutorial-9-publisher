@@ -29,3 +29,6 @@
 
 ### Reflection 2 (Running RabbitMQ)
 ![Screenshot of running RabbitMQ on local machine](RabbitMQ.png)
+
+### Reflection 3 (Sending and processing events)
+![Screenshot of sending events with publisher and consuming events with subscriber](SendingProcessingEvent.png)
