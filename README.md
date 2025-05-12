@@ -32,3 +32,7 @@
 
 ### Reflection 3 (Sending and processing events)
 ![Screenshot of sending events with publisher and consuming events with subscriber](SendingProcessingEvent.png)
+
+### Reflection 4 (RabbitMQ chart)
+![Screenshot of spikes in RabbitMQ dashboard chart](Spike.png)
+- Graf kedua yang terlihat pada *screenshot* (yang memiliki lonjakan/*spike*) adalah graf yang menunjukkan kecepatan *event* di-*publish* (garis berwarna kuning) dan di-*consume* (garis berwarna ungu) lewat RabbitMQ. Terjadi lonjakan karena *publisher* mengirim 5 *event* sekaligus ke RabbitMQ ketika dijalankan, sehingga ketika dijalankan tiga kali, ada 3 lonjakan pada garis kuning. *Event*-*event* tersebut kemudian di-*consume* oleh *subscriber* sehingga setelah beberapa saat, terdapat lonjakan pada garis berwarna ungu.
