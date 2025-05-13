@@ -45,3 +45,7 @@
 ### Reflection 6 (Sending and processing events - Cloud)
 ![Sending and processing events - Cloud](SendingProcessingEvent_Cloud.png)
 - Sama dengan sebelumnya, terlihat bahwa setelah program *publisher* dijalankan, 5 pesan baru akan dikirim ke *message broker* RabbitMQ. Namun kali ini, instance RabbitMQ yang digunakan bukan di *localhost*, tetapi di *cloud*. Pesan-pesan tersebut kemudian di-*consume* dan diproses oleh *subscriber* lewat instance yang sama di cloud.
+
+### Reflection 7 (RabbitMQ chart - Cloud)
+![Spikes in graph on cloud](Spike_Cloud.png)
+- Sama seperti sebelumnya, graf kedua yang terlihat pada *screenshot* adalah graf yang menunjukkan kecepatan *event* di-*publish* dan di-*consume* lewat RabbitMQ (tapi sekarang berada di cloud, bukan di *localhost*). Terjadi lonjakan karena *publisher* mengirim 5 *event* sekaligus ke RabbitMQ ketika dijalankan. *Event*-*event* tersebut kemudian langsung di-*consume* oleh *subscriber* sehingga terdapat lonjakan juga pada garis berwarna ungu.
