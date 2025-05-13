@@ -32,7 +32,16 @@
 
 ### Reflection 3 (Sending and processing events)
 ![Screenshot of sending events with publisher and consuming events with subscriber](SendingProcessingEvent.png)
+- Terlihat bahwa setelah program *publisher* dijalankan, 5 pesan baru akan dikirim ke *message broker* RabbitMQ. Kemudian, pesan-pesan tersebut di-*consume* dan diproses oleh *subscriber*. Untuk tutorial ini pemrosesan tersebut hanya sebatas mencetak isi pesan ke *console*. Karena pesan-pesan tersebut berhasil dibaca oleh *subscriber*, maka program kita sudah berhasil mengimplementasi *event-driven programming*, yaitu mencetak pesan ke *console* saat dikirim oleh *publisher*.
 
 ### Reflection 4 (RabbitMQ chart)
 ![Screenshot of spikes in RabbitMQ dashboard chart](Spike.png)
 - Graf kedua yang terlihat pada *screenshot* (yang memiliki lonjakan/*spike*) adalah graf yang menunjukkan kecepatan *event* di-*publish* (garis berwarna kuning) dan di-*consume* (garis berwarna ungu) lewat RabbitMQ. Terjadi lonjakan karena *publisher* mengirim 5 *event* sekaligus ke RabbitMQ ketika dijalankan, sehingga ketika dijalankan tiga kali, ada 3 lonjakan pada garis kuning. *Event*-*event* tersebut kemudian di-*consume* oleh *subscriber* sehingga setelah beberapa saat, terdapat lonjakan pada garis berwarna ungu.
+
+## Modul 9 Bonus
+### Reflection 5 (Running RabbitMQ - Cloud)
+![Running RabbitMQ on cloud](RabbitMQ_Cloud.png)
+
+### Reflection 6 (Sending and processing events - Cloud)
+![Sending and processing events - Cloud](SendingProcessingEvent_Cloud.png)
+- Sama dengan sebelumnya, terlihat bahwa setelah program *publisher* dijalankan, 5 pesan baru akan dikirim ke *message broker* RabbitMQ. Namun kali ini, instance RabbitMQ yang digunakan bukan di *localhost*, tetapi di *cloud*. Pesan-pesan tersebut kemudian di-*consume* dan diproses oleh *subscriber* lewat instance yang sama di cloud.
